@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>carrusel responsive</title>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <style type="text/css">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0px auto;
+    }
+
+    .slider {
+      width: 94%;
+
+      margin: 100px auto;
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-slide {
+      margin: 0px 10px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+    .slider img {
+      height: 230px;
+    }
+    
+  </style>
+  
+</head>
+
+<body>
+  <div class="container">
+    <section class="slider">
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/01.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/02.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/03.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/04.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/05.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/06.jpg" alt="">
+        </a>
+      </div>
+      <div>
+        <a href="https://www.google.es/" target="_blank">
+          <img src="images/07.jpg" alt="">
+        </a>
+      </div>
+
+    </section>
+  </div>
+
+
+
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>  
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script type="text/javascript">
+    $(window).on('load', function () {
+      $('.slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3.1,
+        slidesToScroll: 1,
+        responsive: [{
+          breakpoint: 771,
+          settings: {
+            arrows: false,
+            slidesToShow: 2.1,
+            slidesToScroll: 2
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            slidesToShow: 1.1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    });
+  </script>
+
+</body>
+
+</html>

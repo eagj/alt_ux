@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>persiana</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: arial;
+        }
+        .container{
+            display: flex;
+            max-width: 1200px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        .persiana{
+            width: 25%;
+            height: 100vh;
+            border-right: 5px solid #fff; 
+            margin-right: 5px;
+            transition: all .5s ease-in-out;
+        }
+            .persiana .contenido{
+                display: inline-block;
+                background-color: rgba(255,255,255,.8);
+                padding: 10px;
+                border-radius: 6px;
+                margin-top: 120px;
+                transition: all .2s;
+                width:80%;
+            }
+                .persiana .contenido h1 {
+                    font-size: 24px;
+                    font-family: arial;
+                }
+                .persiana .contenido p.descrip{
+                    display: none;
+                    text-align: left;
+                    margin: 20px 0;
+                }
+                .persiana .contenido a {
+                    background-color: red;
+                    color: #fff;
+                    padding: 10px 40px;
+                    margin: 20px 0;
+                    display: inline-block;
+                    border-radius: 4px;
+                }
+        /*FULL*/
+        .persiana.full{
+            width:100%;
+        }
+        .persiana.full .contenido{
+            max-width: 80%;
+        }
+        .persiana.full .contenido p.descrip{
+            display: inline-block;
+        }
+
+        /*QUARTER*/
+        .persiana.quarter .contenido{
+            transform: rotate(-90deg);
+            margin-top:120px;
+            background-color: transparent;
+        }
+            .persiana.quarter .contenido a{
+                display:none;
+            }
+            .persiana.quarter .contenido h1{
+                color:#fff;
+            }
+   @media(max-width:768px){
+       .container{
+            flex-flow: column;
+            height:100vh;
+       }
+       .container .persiana{
+           width:100%;
+           height:auto;
+       }
+       .container .persiana .contenido{
+            margin-top: 13%;
+            padding: 20px 10px;
+       }
+   }
+   
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="persiana" id="persiana1" style="background:transparent url(images_full/01.jpg) no-repeat left 0">
+            <div class="contenido">
+                <h1>Particulares</h1>
+                <p class="descrip">Contamos con más de 82.000 inmuebles y grandes descuentos en viviendas, oficinas, locales, suelos.</p>
+                <a href="#"><span>Acceder</span></a>
+            </div>
+        </div>
+        <div class="persiana" id="persiana2" style="background:transparent url(images_full/02.jpg) no-repeat left 0">
+            <div class="contenido">
+                <h1>Inversores</h1>
+                <p class="descrip">Contamos con más de 82.000 inmuebles y grandes descuentos en viviendas, oficinas, locales, suelos.</p>
+                <a href="#"><span>Acceder</span></a>
+            </div>
+        </div>
+        <div class="persiana" id="persiana2" style="background:transparent url(images_full/03.jpg) no-repeat left 0">
+            <div class="contenido">
+                <h1>Profesionales</h1>
+                <p class="descrip">Contamos con más de 82.000 inmuebles y grandes descuentos en viviendas, oficinas, locales, suelos.</p>
+                <a href="#"><span>Acceder</span></a>
+            </div>   
+        </div>
+        <div class="persiana" id="persiana2" style="background:transparent url(images_full/04.jpg) no-repeat left 0">
+            <div class="contenido">
+                <h1>Comercialización</h1>
+                <p class="descrip">Contamos con más de 82.000 inmuebles y grandes descuentos en viviendas, oficinas, locales, suelos.</p>
+                <a href="#"><span>Acceder</span></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>        
+    $( ".persiana" ).hover(
+        function() {
+            $(".persiana").toggleClass("quarter");
+            $(this).toggleClass("full");
+            $(this).removeClass("quarter");
+        }
+    );
+    </script>
+</body>
+</html>   
